@@ -17,7 +17,7 @@ class MobileTopSection extends StatelessWidget {
           'Aprenda Flutter no seu tempo',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 40,
+            fontSize: 25,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -28,13 +28,27 @@ class MobileTopSection extends StatelessWidget {
           'Bora aprender Flutter! Cursos por apenas 22,90. Qualidade Garantida',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 20,
+            fontSize: 15,
           ),
         ),
-        const TextField(
-          decoration: InputDecoration(),
-          style: TextStyle(color: Colors.white),
-        )
+        const SizedBox(
+          height: 10,
+        ),
+        const Padding(
+          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: "Digite alguma busca aqui",
+              contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
+              labelStyle: TextStyle(fontSize: 18, color: Colors.white),
+              border: OutlineInputBorder(
+                borderSide:
+                    BorderSide(color: Colors.white), // Define a cor da borda
+              ),
+            ),
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
       ],
     );
   }

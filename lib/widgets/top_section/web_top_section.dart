@@ -10,7 +10,7 @@ class WebTopSection extends StatelessWidget {
       children: [
         SizedBox(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height / 2.5,
+          height: MediaQuery.of(context).size.height / 2.3,
           child: Image.network(
             'https://intelicity-assets.s3.sa-east-1.amazonaws.com/celular.jpg',
             fit: BoxFit.cover,
@@ -18,9 +18,10 @@ class WebTopSection extends StatelessWidget {
         ),
         Positioned(
           left: 80,
-          top: 20,
+          top: 10,
           child: SizedBox(
-            width: 400,
+            width: 450,
+            height: 500,
             child: Container(
               padding: const EdgeInsets.all(16),
               color: Colors.black,
@@ -30,7 +31,7 @@ class WebTopSection extends StatelessWidget {
                     'Aprenda Flutter no seu tempo',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 40,
+                      fontSize: 35,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -43,6 +44,21 @@ class WebTopSection extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 20,
                     ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: "Digite alguma busca aqui",
+                      contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
+                      labelStyle: TextStyle(fontSize: 18, color: Colors.white),
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            color: Colors.white), // Define a cor da borda
+                      ),
+                    ),
+                    style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
